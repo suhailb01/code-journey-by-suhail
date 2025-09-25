@@ -17,7 +17,7 @@ const Projects = () => {
         "Monthly and yearly financial reports",
         "Responsive design for all devices"
       ],
-      githubUrl: "https://github.com/suhailbasha/expense-tracker",
+      githubUrl: "https://github.com/suhailb01/SmartExpenseTracker/tree/main/SmartSpendExpense",
       liveUrl: "#",
       type: "Full Stack Web Application"
     },
@@ -33,7 +33,7 @@ const Projects = () => {
         "Email notifications and reminders",
         "Dashboard for event organizers"
       ],
-      githubUrl: "https://github.com/suhailbasha/event-management",
+      githubUrl: "https://github.com/suhailb01/Eventmanagement",
       liveUrl: "#",
       type: "Enterprise Web Application"
     }
@@ -161,7 +161,7 @@ const Projects = () => {
             Want to see more of my work? Check out my GitHub for additional projects and contributions.
           </p>
           <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground" asChild>
-            <a href="https://github.com/suhailbasha" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/suhailb01" target="_blank" rel="noopener noreferrer">
               <Github size={20} className="mr-2" />
               View All Projects
             </a>

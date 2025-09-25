@@ -126,7 +126,7 @@ const Skills = () => {
             {[
               'Java', 'Spring Boot', 'MySQL', 'MongoDB', 'Spring MVC', 
               'HTML5', 'CSS3', 'JavaScript', 'Bootstrap', 'REST API',
-              'Git', 'Maven', 'JPA/Hibernate'
+              'Git', 'JPA/Hibernate'
             ].map((tech, index) => (
               <span
                 key={tech}

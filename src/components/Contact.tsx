@@ -1,20 +1,10 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, CheckCircle } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/hooks/use-toast';
+import { Mail, Phone, MapPin, Github, Linkedin, CheckCircle } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+ 
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
+  
 
   const contactInfo = [
     {
@@ -41,46 +31,18 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://linkedin.com/in/suhailbasha",
+      href: "https://www.linkedin.com/in/suhailbasha01",
       color: "hover:text-blue-500"
     },
     {
       icon: Github,
       label: "GitHub",
-      href: "https://github.com/suhailbasha",
+      href: "https://github.com/suhailb01",
       color: "hover:text-gray-600"
     }
   ];
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message Sent Successfully!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
-        duration: 5000,
-      });
-      
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-      setIsSubmitting(false);
-    }, 1000);
-  };
+  
 
   return (
     <section id="contact" className="py-20 bg-gradient-secondary">
@@ -96,7 +58,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-1 gap-12 max-w-6xl mx-auto">
           {/* Contact Information */}
           <div className="space-y-8 animate-slide-in-left">
             <div>
@@ -166,101 +128,7 @@ const Contact = () => {
             </Card>
           </div>
 
-          {/* Contact Form */}
-          <div className="animate-slide-in-right">
-            <Card className="shadow-large border-border/50">
-              <CardHeader>
-                <CardTitle className="text-2xl font-playfair">Send a Message</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium mb-2 text-foreground">
-                        Your Name *
-                      </label>
-                      <Input
-                        id="name"
-                        name="name"
-                        type="text"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full"
-                        placeholder="Enter your name"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium mb-2 text-foreground">
-                        Email Address *
-                      </label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full"
-                        placeholder="Enter your email"
-                      />
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="subject" className="block text-sm font-medium mb-2 text-foreground">
-                      Subject *
-                    </label>
-                    <Input
-                      id="subject"
-                      name="subject"
-                      type="text"
-                      value={formData.subject}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full"
-                      placeholder="What's this about?"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium mb-2 text-foreground">
-                      Message *
-                    </label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      required
-                      rows={6}
-                      className="w-full resize-none"
-                      placeholder="Tell me about your project or opportunity..."
-                    />
-                  </div>
-                  
-                  <Button 
-                    type="submit" 
-                    size="lg" 
-                    className="w-full bg-gradient-primary hover:shadow-glow"
-                    disabled={isSubmitting}
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
-                        Sending...
-                      </>
-                    ) : (
-                      <>
-                        <Send size={18} className="mr-2" />
-                        Send Message
-                      </>
-                    )}
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-          </div>
+          
         </div>
       </div>
     </section>
