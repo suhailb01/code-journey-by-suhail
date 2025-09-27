@@ -136,8 +136,8 @@ const Hero = () => {
                 <img 
                   src={profileImage} 
                   alt="Suhail Basha - Java FullStack Developer" 
-                  className="w-full h-full object-cover object-top"
-                  style={{ objectPosition: 'center top' }}
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: 'center 25%' }}
                 />
               </div>
               <div className="absolute inset-0 rounded-full bg-gradient-primary opacity-20 hover:opacity-30 transition-opacity"></div>
