@@ -132,14 +132,14 @@ const Hero = () => {
           {/* Profile Image */}
           <div className="flex justify-center lg:justify-end animate-slide-in-right">
             <div className="relative">
-              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-large hover-lift">
+              <div className="w-80 h-96 lg:w-96 lg:h-[28rem] rounded-2xl overflow-hidden shadow-large hover-lift">
                 <img 
                   src={profileImage} 
                   alt="Suhail Basha - Java FullStack Developer" 
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
-              <div className="absolute inset-0 rounded-full bg-gradient-primary opacity-20 hover:opacity-30 transition-opacity"></div>
+              <div className="absolute inset-0 rounded-2xl bg-gradient-primary opacity-20 hover:opacity-30 transition-opacity"></div>
             </div>
           </div>
         </div>
