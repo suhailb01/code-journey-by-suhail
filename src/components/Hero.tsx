@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ChevronDown, Download, Github, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import profileImage from '@/assets/profile-image.jpg';
+import profileImage from '@/assets/profile-image-enhanced.jpg';
 
 const Hero = () => {
   const [currentSkill, setCurrentSkill] = useState(0);
