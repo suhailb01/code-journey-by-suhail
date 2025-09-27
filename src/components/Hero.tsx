@@ -94,7 +94,7 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 className="bg-gradient-primary hover:shadow-glow text-lg px-8 py-3"
-                onClick={() => window.open('/resume.pdf', '_blank')}
+                onClick={() => window.open('https://drive.google.com/uc?export=download&id=1c2ZsgeFXLUNksky3iOjrUxLWsYM5r8ks', '_blank')}
               >
                 <Download size={20} className="mr-2" />
                 Download Resume
@@ -136,7 +136,7 @@ const Hero = () => {
                 <img 
                   src={profileImage} 
                   alt="Suhail Basha - Java FullStack Developer" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
               <div className="absolute inset-0 rounded-full bg-gradient-primary opacity-20 hover:opacity-30 transition-opacity"></div>

@@ -87,7 +87,7 @@ const Header = () => {
               variant="default" 
               size="sm" 
               className="bg-gradient-primary hover:shadow-glow"
-              onClick={() => window.open('/resume.pdf', '_blank')}
+              onClick={() => window.open('https://drive.google.com/uc?export=download&id=1c2ZsgeFXLUNksky3iOjrUxLWsYM5r8ks', '_blank')}
             >
               <Download size={16} className="mr-2" />
               Resume
@@ -145,7 +145,7 @@ const Header = () => {
                   variant="default" 
                   size="sm" 
                   className="bg-gradient-primary"
-                  onClick={() => window.open('/resume.pdf', '_blank')}
+                  onClick={() => window.open('https://drive.google.com/uc?export=download&id=1c2ZsgeFXLUNksky3iOjrUxLWsYM5r8ks', '_blank')}
                 >
                   <Download size={16} className="mr-2" />
                   Resume
